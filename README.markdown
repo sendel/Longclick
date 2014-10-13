@@ -7,14 +7,9 @@ Inspired by similar events on touch-sensitive devices.
 Using *Long Click*:
 -------------------
 
-### `.click( duration, handler )`
-* Simply supply `duration` to the well-known [`.click`][jquery-click] method and you have a *long click*.
-* This method is a shortcut for `.bind("longclick", handler)`.
-* Returns *[jQuery][jquery-jquery]*.
-
-### or `.longclick( [ duration ], [ handler ] )`
+### `.longclick([ handler ], [ duration ])`
 * If supplied, optional custom `duration` is used for target element(s).
-* This method is a shortcut for `.click(duration, handler)` when at least `handler` is supplied and for `.trigger("longclick")` if called without arguments.
+* This method is a shortcut for `.trigger("longclick")` if called without arguments.
 * Returns *[jQuery][jquery-jquery]*.
 
 
@@ -57,18 +52,4 @@ Fair Warning:
 Till v1.0.
 
 ---
-Copyright (c) 2010 [Petr Vostřel][pisi]
-» Check out my other jQuery plugin [Reel][reel] for 360° image projection
-
-[license-mit]: /pisi/Longclick/raw/master/MIT-LICENSE.txt
-[license-gpl]: /pisi/Longclick/raw/master/GPL-LICENSE.txt
-[jquery]: http://www.jquery.com/
-[jquery-jquery]: http://docs.jquery.com/Types#jQuery
-[jquery-live]: http://api.jquery.com/live/
-[jquery-bind]: http://api.jquery.com/bind/
-[jquery-unbind]: http://api.jquery.com/unbind/
-[jquery-trigger]: http://api.jquery.com/trigger/
-[jquery-click]: http://api.jquery.com/click/
-[pisi]: http://petr.vostrel.cz/
-[reel]: http://jquery.vostrel.cz/reel
-[download-min]: http://github.com/pisi/Longclick/raw/master/jquery.longclick-min.js
+[Original page] https://github.com/pisi/Longclick [pisi]: http://petr.vostrel.cz/
