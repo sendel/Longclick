@@ -3,6 +3,9 @@ jQuery *Long Click* Event
 *Press & hold mouse/touch "long click" special event for [jQuery 1.4.x][jquery]*.
 Inspired by similar events on touch-sensitive devices.
 
+Library amended by Pascal GANAYE mainly to handle jQuery up to 2.1.0.
+[Original page] https://github.com/pisi/Longclick
+
 
 Using *Long Click*:
 -------------------
@@ -45,11 +48,13 @@ License:
 Free for use in all personal or commercial projects under both [MIT][license-mit] and [GPL][license-gpl] licenses.
 
 
-Fair Warning:
--------------
-
-**Under intensive loving development**. v0.x works just fine, but is very "fluid" API-wise.
-Till v1.0.
+Recent History:
+-------
+### 13-Oct-2014 : Support for JQuery 2.1.0
+Removed the $.click(duration, function) that conflicts with `$.click( [eventData ], handler )` add in JQuery 1.4.3.
+Inverted the parameters of `.longclick([ handler ], [ duration ])`. 
+I felt at the time that it was more in line with regular Javascript constructs like `setTimeOut(function, interval)`.
+Looking at the jQuery effects like `.fadeIn( [duration ] [, complete ] ), I am not really sure whether it was a good idea anymore.
 
 ---
-[Original page] https://github.com/pisi/Longclick [pisi]: http://petr.vostrel.cz/
+
