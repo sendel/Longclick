@@ -30,7 +30,7 @@ Event `"longclick"`:
 * Works with standard [`live`][jquery-live], [`bind`][jquery-bind], [`unbind`][jquery-unbind] and [`trigger`][jquery-trigger] event methods as one would expect.
 
 ##  `.longclick_state()`
-* While element pressed return true, else false. This is useful for counters.
+* While element pressed return *true*, else *false*. This is useful for counters.
 
 Requirements:
 -------------
