@@ -6,11 +6,12 @@
  * @license Longclick Event
  * Copyright (c) 2010 Petr Vostrel (http://petr.vostrel.cz/)
  * Modified in 2014 by Pascal GANAYE (https://github.com/paganaye/Longclick/)
+ * Modified in 2015 by (C)VIOLONIX inc. sendel2000@gmail.com
  * Dual licensed under the MIT (MIT-LICENSE.txt)
  * and GPL (GPL-LICENSE.txt) licenses.
  *
- * Version: 0.4.0
- * Updated: 2014-10-13
+ * Version: 0.4.0-c
+ * Updated: 2015-2-6
  */ (function ($) {
     /** `.longclick([ handler ], [ duration ])`
      * If supplied, optional custom `duration` is used for target element(s).
@@ -25,6 +26,13 @@
         return handler ? $this.bind(type, handler) : $this.trigger(type);
     };
 
+  /**
+   * .longclick_state()
+   * while element pressed return true, else false
+   */
+  $.fn.longclick_state = function state(){
+	  return $(this).data(_fired_);
+  }
     /**
      *  Configuration
      */
@@ -109,6 +117,8 @@
             /* cancel the scheduled trigger */
             $(this).data(_timer_, clearTimeout(timer) || null);
         }
+        /* set fired to false for check state*/
+        $(this).data(_fired_, false)
     }
 
     function click(event) {
